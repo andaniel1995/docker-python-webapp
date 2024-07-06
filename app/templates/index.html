@@ -1,0 +1,13 @@
+<form method="post">
+            <input type="text" name="index" placeholder="Enter Fibonacci index">
+            <input type="submit" name="submit_button" value="Calculate">
+        </form>
+        {% if result is not none %}
+            <p>Fibonacci value for index {{ index }}: {{ result }}</p>
+        {% endif %}
+        <h2>Stored Fibonacci Values:</h2>
+        <ul>
+            {% for record in records %}
+                <li>Index: {{ record[0] }}, Value: {{ record[1] }}</li>
+            {% endfor %}
+        </ul>
